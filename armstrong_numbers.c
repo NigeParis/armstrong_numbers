@@ -6,59 +6,60 @@
 /*   By: 42_Legin <Nige@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 20:46:33 by 42_Legin          #+#    #+#             */
-/*   Updated: 2023/06/05 21:02:35 by 42_Legin         ###   ########.fr       */
+/*   Updated: 2023/06/05 22:41:17 by 42_Legin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "armstrong_numbers.h"
 
-static int	get_power(int candidate_copy);
-static int	check_candidate_number_is_positive(int nbr);
-static int	get_sum(int power, int power_sum, int current_digit);
+static int	ft_get_nbr_of_digits(int number);
+static int	ft_check_number_is_positive(int nbr);
+static int	ft_pow(int power, int current_digit);
 
 bool	is_armstrong_number(int candidate)
 {
 	int	power;
-	int	candidate_copy;
+	int	original_number;
 	int	current_digit;
-	int	power_sum;
+	int	result;
 	int	sum;
 
+	original_number = candidate;
 	sum = 0;
-	candidate_copy = check_candidate_number_is_positive(candidate);
-	power = get_power(candidate);
-	while (candidate_copy)
+	candidate = ft_check_number_is_positive(original_number);
+	power = ft_get_nbr_of_digits(original_number);
+	while (candidate)
 	{
-		current_digit = candidate_copy % 10;
-		power_sum = get_sum(power, 1, current_digit);
-		sum += power_sum;
-		candidate_copy /= 10;
+		current_digit = candidate % 10;
+		result = ft_pow(power, current_digit);
+		sum += result;
+		candidate /= 10;
 	}
-	return (sum == candidate);
+	return (sum == original_number);
 }
 
 /**
 *	gets number of digits and returns the number 99 -> 2 etc
 */
 
-static int	get_power(int number)
+static int	ft_get_nbr_of_digits(int number)
 {
-	int	power;
+	int	nbr_of_digits;
 
-	power = 0;
+	nbr_of_digits = 0;
 	while (number)
 	{
 		number /= 10;
-		power++;
+		nbr_of_digits++;
 	}
-	return (power);
+	return (nbr_of_digits);
 }
 
 /**
-*	checks if number is positive
+*	checks if number is positive and returns the number or 0 if negative
 */
 
-static int	check_candidate_number_is_positive(int nbr)
+static int	ft_check_number_is_positive(int nbr)
 {
 	if (nbr < 0)
 		nbr = 0;
@@ -69,12 +70,14 @@ static int	check_candidate_number_is_positive(int nbr)
 *	gets the sum of a power calculation 3^3 returns 27 
 */
 
-static int	get_sum(int power, int power_sum, int current_digit)
-{
-	int	nbr;
+static int	ft_pow(int nbr_of_iterations, int current_digit)
 
-	nbr = 0;
-	while ((nbr++) != power)
-		power_sum = power_sum * current_digit;
-	return (power_sum);
+{
+	int	iteration;
+	int	result = 1;
+
+	iteration = 0;
+	while ((iteration++) != nbr_of_iterations)
+		result = result * current_digit;
+	return (result);
 }
