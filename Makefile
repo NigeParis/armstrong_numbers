@@ -1,24 +1,21 @@
 EXEC=armstrong_numbers
 CFLAGS=-Wall -Wextra -Werror
 CC=gcc
-GAME_ENGINE=armstrong_numbers
-#GAME_INTERFACE=ft_interface
+FUNCTION=armstrong_numbers
 
 .PHONY: run
 run: $(EXEC)
 	./$(EXEC)
 
-$(EXEC): main.o $(GAME_ENGINE).o #$(GAME_INTERFACE).o
+$(EXEC): main.o $(FUNCTION).o
 	$(CC) $^ -o $(EXEC)
 
-main.o: main.c $(GAME_ENGINE).h
+main.o: main.c $(FUNCTION).h
 	$(CC) $(CFLAGS) -c main.c
 
-$(GAME_ENGINE).o: $(GAME_ENGINE).c
-	$(CC) $(CFLAGS) -c $(GAME_ENGINE).c
+$(FUNCTION).o: $(FUNCTION).c
+	$(CC) $(CFLAGS) -c $(FUNCTION).c
 
-#$(GAME_INTERFACE).o: $(GAME_INTERFACE).c
-#	$(CC) $(CFLAGS) -c $(GAME_INTERFACE).c
 
 .PHONY: clean
 clean:
