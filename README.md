@@ -27,3 +27,6 @@ library allowed unistd.h, stdbool.h, stdlib.h
 prototype :  bool	is_armstrong_number(int candidate)
 
 -----------------------------------------------------------------------------
+
+
+<img width="528" alt="Capture d’écran 2023-06-05 à 13 54 21" src="https://github.com/NigeParis/armstrong_numbers/assets/128382762/4d99dedd-e0b3-4fad-a905-b474c361dc17">
