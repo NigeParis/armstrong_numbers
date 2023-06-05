@@ -6,7 +6,7 @@
 /*   By: 42_Legin <Nige@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:05:56 by 42_Legin          #+#    #+#             */
-/*   Updated: 2023/06/05 13:44:12 by 42_Legin         ###   ########.fr       */
+/*   Updated: 2023/06/05 14:10:54 by 42_Legin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdbool.h>
 #include "armstrong_numbers.h"
 
-#define MIN 0
+#define MIN -5
 #define MAX 2147483647
 
 
