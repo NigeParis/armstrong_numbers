@@ -6,7 +6,7 @@
 /*   By: 42_Legin <Nige@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:05:56 by 42_Legin          #+#    #+#             */
-/*   Updated: 2023/06/05 14:10:54 by 42_Legin         ###   ########.fr       */
+/*   Updated: 2023/06/05 20:07:26 by 42_Legin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 #include <stdbool.h>
 #include "armstrong_numbers.h"
 
-#define MIN -5
-#define MAX 2147483647
-
+#define MIN 0
+#define MAX 2000
 
 bool	is_armstrong_number(int candidate);
-
 
 int	main(void)
 {
@@ -28,7 +26,7 @@ int	main(void)
 	int	nbr;
 
 	count = MIN;
-	nbr = 0;
+	nbr = -1000;
 	while (count < MAX)
 	{
 		if (is_armstrong_number(nbr))
