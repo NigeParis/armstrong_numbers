@@ -6,7 +6,7 @@
 /*   By: 42_Legin <Nige@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 20:46:33 by 42_Legin          #+#    #+#             */
-/*   Updated: 2023/06/06 09:01:33 by 42_Legin         ###   ########.fr       */
+/*   Updated: 2023/06/06 09:12:59 by 42_Legin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ bool	is_armstrong_number(int candidate)
 	original_number = candidate;
 	sum = 0;
 	power = ft_get_nbr_of_digits(original_number);
-	if(candidate < 0)
+	if (candidate < 0)
 		candidate = false;
 	while (candidate)
 	{
@@ -44,7 +44,7 @@ bool	is_armstrong_number(int candidate)
 
 static int	ft_get_nbr_of_digits(int number)
 {
-		  int	nbr_of_digits;
+	int	nbr_of_digits;
 
 	nbr_of_digits = 0;
 	while (number)
@@ -63,8 +63,9 @@ static int	ft_pow(int base, int power)
 
 {
 	int	iteration;
-	int	result = 1;
+	int	result;
 
+	result = 1;
 	iteration = 0;
 	while ((iteration++) != base)
 		result = result * power;
