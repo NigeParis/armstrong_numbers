@@ -6,7 +6,7 @@
 /*   By: 42_Legin <Nige@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 20:46:33 by 42_Legin          #+#    #+#             */
-/*   Updated: 2023/06/06 12:07:01 by 42_Legin         ###   ########.fr       */
+/*   Updated: 2023/06/06 17:57:51 by 42_Legin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ bool	is_armstrong_number(int candidate)
 	original_number = candidate;
 	result = 0;
 	power = ft_get_nbr_of_digits(original_number);
-	if (candidate < 0)
+	if (original_number < 0)
 		candidate = false;
 	while (candidate)
 	{
