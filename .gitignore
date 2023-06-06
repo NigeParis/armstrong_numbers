@@ -1,6 +1,6 @@
 # ignore ALL .o files
 *.o
-# ignore file exec armstrong_numbers
+# ignore file exec ./armstrong_numbers
 armstrong_numbers
 # ignore file .DS_Store
 .DS_Store
