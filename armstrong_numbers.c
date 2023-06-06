@@ -6,7 +6,7 @@
 /*   By: 42_Legin <Nige@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 20:46:33 by 42_Legin          #+#    #+#             */
-/*   Updated: 2023/06/06 08:01:30 by 42_Legin         ###   ########.fr       */
+/*   Updated: 2023/06/06 09:01:33 by 42_Legin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static int	ft_get_nbr_of_digits(int number)
 }
 
 /**
-*	gets the sum of a power calculation 3^3 returns 27 
+*	pow() gets the power calculation ex : 3^3 returns 27 
 */
 
 static int	ft_pow(int base, int power)
