@@ -6,7 +6,7 @@
 /*   By: 42_Legin <Nige@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:05:56 by 42_Legin          #+#    #+#             */
-/*   Updated: 2023/06/05 22:44:14 by 42_Legin         ###   ########.fr       */
+/*   Updated: 2023/06/06 17:43:29 by 42_Legin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(void)
 	{
 		if (is_armstrong_number(nbr))
 		{
-			printf("\nThis is an armstrong number     :  %d", nbr);
+			printf("\nThis is an armstrong number : %d", nbr);
 		}
 		count++;
 		nbr++;
